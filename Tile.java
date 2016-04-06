@@ -23,14 +23,20 @@ public class Tile {
     
   }
   
+
+  //finds the color of a tile based on its properties
   public Color getColor() {
-    if(walkable && shootable) return Color.GREEN;
-    if(!walkable && shootable) return Color.RED;
+    if(walkable && shootable) return Color.GREEN; //regular space
+    if(!walkable && shootable) return Color.RED; //can attack through cannot walk on
     if(walkable && !shootable) return Color.YELLOW; // anti-bullet field
-    if(!walkable && !shootable) return Color.GRAY;
-    return Color.MAGENTA;
+    if(!walkable && !shootable) return Color.GRAY;  // unplayable space
+    //TEMPORARY NOTE- add more properities here
+    
+    return Color.MAGENTA; //error
   }
   
+  //neighbors include the 4 tiles directly up, down, left, and right from the current tile.
+  //locations off the map are ignored, making it possible for a tile to only have 2 neighbors
   public List<Tile> getNeighbors(Tile[][] map) {
     if(neighbors != null) return neighbors;
     neighbors = new LinkedList<Tile>();

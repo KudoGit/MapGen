@@ -1,0 +1,19 @@
+Just another map generator.
+Originally programmed by James Kuch and Richard Nicholson for CMPM146 at UCSC.
+
+
+Files:
+
+Main.java
+-The main GUI. Initializes the frame that the map is drawn on and the menubar.
+
+Visualizer.java
+-All the map generation is actually done here
+
+Tile.java
+-The Tile class, holds all properties of a tile and visual color representations based on those properties
+
+Pair.java
+-Literally the generic Pair class to hold 2 objects of data at once.
+-Sure, we probably could've just grabbed java.util.Pair or whatever but Richard decided to code this in its entirety.
+ All 8 lines of it.

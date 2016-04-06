@@ -159,17 +159,17 @@ public class Main {
 
         };
         JOptionPane.showMessageDialog(null, inputs, "Enemy Options", JOptionPane.PLAIN_MESSAGE);
-        int box1 = 0;
-        int box2 = 0;
+        double box1 = 0.0;
+        double box2 = 0.0;
         try {
-          box1 = Integer.parseInt(enemyDensity.getText());
+          box1 = Double.parseDouble(enemyDensity.getText());
         } catch(NumberFormatException f) {
-          box1 = 0;
+          box1 = 0.0;
         }
         try {
-          box2 = Integer.parseInt(enemyLeniency.getText());
+          box2 = Double.parseDouble(enemyLeniency.getText());
         } catch(NumberFormatException f) {
-          box2 = 0;
+          box2 = 0.0;
         }
         
         if(box1 >= 0) v.enemyDensity = box1;
